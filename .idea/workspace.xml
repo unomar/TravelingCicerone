@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a1feb25-68b4-4927-9816-97f620f72f40" name="Default" comment="" />
+    <list default="true" id="0a1feb25-68b4-4927-9816-97f620f72f40" name="Default" comment="Added getBreweriesByLocation functionality and BreweryService.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/service/BreweryService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/das/DistributionDAS.java" afterPath="$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/das/DistributionDAS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/weissbrewing/cicerone/das/DistributionDASTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/weissbrewing/cicerone/das/DistributionDASTest.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,22 +25,34 @@
       <file leaf-file-name="DistributionDAS.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/das/DistributionDAS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="15" column="77" lean-forward="false" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
+            <state relative-caret-position="60">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
+                <element signature="e#1219#1220#0" expanded="true" />
+                <element signature="e#1241#1242#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistributionDASTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DistributionDASTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/weissbrewing/cicerone/das/DistributionDASTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state relative-caret-position="314">
+              <caret line="56" column="86" lean-forward="true" selection-start-line="56" selection-start-column="86" selection-end-line="56" selection-end-column="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BreweryService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/service/BreweryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="42" column="105" lean-forward="false" selection-start-line="42" selection-start-column="105" selection-end-line="42" selection-end-column="105" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,6 +116,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -112,13 +133,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/domain/Brewery.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/das/DistributionDAS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/service/BreweryService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/weissbrewing/cicerone/das/DistributionDASTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1874" />
-    <option name="y" value="-77" />
+    <option name="x" value="1960" />
+    <option name="y" value="-278" />
     <option name="width" value="1400" />
     <option name="height" value="780" />
   </component>
@@ -196,6 +218,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -306,6 +329,10 @@
               <option name="myItemId" value="cicerone" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -385,6 +412,26 @@
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RunManager" selected="JUnit.DistributionDASTest">
+    <configuration default="false" name="BreweryService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.weissbrewing.cicerone.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.weissbrewing.cicerone.service.BreweryService" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="NE WI" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="TravellingCicerone" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="DistributionDASTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -424,6 +471,32 @@
       <option name="PACKAGE_NAME" value="com.weissbrewing.cicerone.das" />
       <option name="MAIN_CLASS_NAME" value="com.weissbrewing.cicerone.das.DistributionDASTest" />
       <option name="METHOD_NAME" value="testGetUniqueBreweriesEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DistributionDASTest.getBreweriesByLocationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.weissbrewing.cicerone.das.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TravellingCicerone" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.weissbrewing.cicerone.das" />
+      <option name="MAIN_CLASS_NAME" value="com.weissbrewing.cicerone.das.DistributionDASTest" />
+      <option name="METHOD_NAME" value="getBreweriesByLocationTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -641,14 +714,18 @@
       <listeners />
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.DistributionDASTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.DistributionDASTest.testGetUniqueBreweriesEmpty" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Application.BreweryService" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DistributionDASTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DistributionDASTest.testGetUniqueBreweriesEmpty" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DistributionDASTest.getBreweriesByLocationTest" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="JUnit.DistributionDASTest" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.DistributionDASTest.testGetUniqueBreweriesEmpty" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DistributionDASTest.getBreweriesByLocationTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.BreweryService" />
       </list>
     </recent_temporary>
   </component>
@@ -666,15 +743,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DistributionDASTest - 2017.01.11 at 11h 35m 43s.xml">
-      <configuration name="DistributionDASTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DistributionDASTest - 2017.01.11 at 11h 39m 44s.xml">
-      <configuration name="DistributionDASTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DistributionDASTest - 2017.01.11 at 11h 51m 58s.xml">
-      <configuration name="DistributionDASTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DistributionDASTest - 2017.01.11 at 11h 54m 33s.xml">
       <configuration name="DistributionDASTest" configurationId="JUnit" />
     </history-entry>
@@ -693,30 +761,39 @@
     <history-entry file="DistributionDASTest - 2017.01.11 at 12h 19m 26s.xml">
       <configuration name="DistributionDASTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DistributionDASTest - 2017.01.11 at 15h 46m 26s.xml">
+      <configuration name="DistributionDASTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DistributionDASTest_getBreweriesByLocationTest - 2017.01.11 at 15h 45m 20s.xml">
+      <configuration name="DistributionDASTest.getBreweriesByLocationTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="DistributionDASTest_testGetUniqueBreweriesEmpty - 2017.01.11 at 11h 59m 07s.xml">
+      <configuration name="DistributionDASTest.testGetUniqueBreweriesEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DistributionDASTest_testGetUniqueBreweriesEmpty - 2017.01.11 at 15h 46m 19s.xml">
       <configuration name="DistributionDASTest.testGetUniqueBreweriesEmpty" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1874" y="-77" width="1400" height="780" extended-state="0" />
+    <frame x="1960" y="-278" width="1400" height="780" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.50285715" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.49714285" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49714285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -733,6 +810,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added getBreweriesByLocation functionality and BreweryService." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getBreweriesByLocation functionality and BreweryService." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -784,22 +865,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/das/DistributionDAS.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/weissbrewing/cicerone/das/DistributionDASTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="15" column="77" lean-forward="false" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
+        <state relative-caret-position="314">
+          <caret line="56" column="86" lean-forward="true" selection-start-line="56" selection-start-column="86" selection-end-line="56" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/weissbrewing/cicerone/das/DistributionDASTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/das/DistributionDAS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        <state relative-caret-position="60">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weissbrewing/cicerone/service/BreweryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="42" column="105" lean-forward="false" selection-start-line="42" selection-start-column="105" selection-end-line="42" selection-end-column="105" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

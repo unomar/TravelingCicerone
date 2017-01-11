@@ -18,6 +18,7 @@ public class DistributionDAS
     private static final String SQLITE_JDBC = "org.sqlite.JDBC";
 
     private static final String GET_UNIQUE_BREWERIES_SQL = "select * from distribution where %s = 0 and %s = 1";
+    private static final String GET_BREWERIES_SQL = "select * from distribution where %s = 1";
 
     private Connection c = null;
 
@@ -44,6 +45,12 @@ public class DistributionDAS
         init();
     }
 
+    public List<Brewery> getBreweriesByLocation(final Location location)
+    {
+        String query = String.format(GET_BREWERIES_SQL, location.name());
+        return getBreweries(query);
+    }
+
     /**
      * Retrieve a list of unique breweries
      * @param home The users home location
@@ -51,6 +58,17 @@ public class DistributionDAS
      * @return A list of breweries that are not available in their home state, but are available in their current state
      */
     public List<Brewery> getUniqueBreweries(final Location home, final Location current)
+    {
+        String query = String.format(GET_UNIQUE_BREWERIES_SQL, home.name(), current.name());
+        return getBreweries(query);
+    }
+
+    /**
+     * Retrieve a list of breweries using the specified SQL Query
+     * @param sqlQuery The Query to use
+     * @return A list of Breweries
+     */
+    private List<Brewery> getBreweries(final String sqlQuery)
     {
         List<Brewery> breweries = new ArrayList<>();
 
@@ -63,9 +81,9 @@ public class DistributionDAS
         try
         {
             stmt = c.createStatement();
-            String query = String.format(GET_UNIQUE_BREWERIES_SQL, home.name(), current.name());
-            LOG.info("Executing query: " + query);
-            ResultSet rs = stmt.executeQuery(query);
+
+            LOG.info("Executing query: " + sqlQuery);
+            ResultSet rs = stmt.executeQuery(sqlQuery);
 
             while (rs.next())
             {

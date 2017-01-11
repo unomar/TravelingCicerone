@@ -31,7 +31,7 @@ public class DistributionDASTest
 
     /**
      * Perform verification on brewery lists
-     * @param breweryList The list to perform verification uponR
+     * @param breweryList The list to perform verification upon breweries
      */
     private void assertBrewery(List<Brewery> breweryList)
     {
@@ -57,6 +57,17 @@ public class DistributionDASTest
         List<Brewery> breweryList = distributionDAS.getUniqueBreweries(home, current);
 
         Assert.assertNotNull("List of breweries was null", breweryList);
-        Assert.assertFalse("List of breweries was empty", breweryList.size() > 0);
+        Assert.assertEquals("List of breweries was not empty", breweryList.size(),  0);
+    }
+
+    @Test
+    public void getBreweriesByLocationTest()
+    {
+        Location home = Location.NE;
+        DistributionDAS distributionDAS = new DistributionDAS();
+        List<Brewery> breweryList = distributionDAS.getBreweriesByLocation(home);
+
+        Assert.assertNotNull("List of breweries was null", breweryList);
+        Assert.assertTrue("List of breweries was empty", breweryList.size() > 0);
     }
 }
