@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TravellingCicerone.iml" filepath="$PROJECT_DIR$/TravellingCicerone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TravellingCicerone.iml" filepath="$PROJECT_DIR$/.idea/modules/TravellingCicerone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TravellingCicerone_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TravellingCicerone_main.iml" group="TravellingCicerone" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TravellingCicerone_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TravellingCicerone_test.iml" group="TravellingCicerone" />
     </modules>
   </component>
 </project>

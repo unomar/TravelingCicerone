@@ -41,10 +41,7 @@ public class DistributionDASTest
             Assert.assertNotNull("Brewery locations list was null", brewery.getLocations());
             Assert.assertTrue("Brewery has no distribution", brewery.getLocations().size() > 0);
 
-            if (LOG.isTraceEnabled())
-            {
-                LOG.trace("Brewery [" + brewery.getName() + "] verified with distribution to [" + brewery.getAvailability() + "] locations.");
-            }
+            LOG.info("Brewery [" + brewery.getName() + "] verified with distribution to [" + brewery.getAvailability() + "] locations.");
         }
     }
 
