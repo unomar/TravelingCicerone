@@ -17,6 +17,8 @@ public class Brewery
 
     private String country_name;
 
+    private BeerList beer_list;
+
     public int getBrewery_id()
     {
         return brewery_id;
@@ -47,6 +49,16 @@ public class Brewery
         return country_name;
     }
 
+    public BeerList getBeer_list()
+    {
+        return beer_list;
+    }
+
+    public void setBeer_list(BeerList beer_list)
+    {
+        this.beer_list = beer_list;
+    }
+
     @Override
     public String toString()
     {
@@ -57,6 +69,7 @@ public class Brewery
                 ", brewery_slug='" + brewery_slug + '\'' +
                 ", brewery_label='" + brewery_label + '\'' +
                 ", country_name='" + country_name + '\'' +
+                ", beer_list=" + beer_list +
                 '}';
     }
 }

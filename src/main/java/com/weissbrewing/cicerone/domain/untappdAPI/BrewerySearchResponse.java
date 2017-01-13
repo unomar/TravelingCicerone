@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by kevinweiss on 1/13/17.
  */
-public class QueryResponse
+public class BrewerySearchResponse
 {
     private String search_type;
 
@@ -54,7 +54,7 @@ public class QueryResponse
     @Override
     public String toString()
     {
-        return "QueryResponse{" +
+        return "BrewerySearchResponse{" +
                 "search_type='" + search_type + '\'' +
                 ", sort='" + sort + '\'' +
                 ", term='" + term + '\'' +

@@ -1,5 +1,6 @@
 package com.weissbrewing.cicerone.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,6 +17,8 @@ public class Brewery
     private Integer availability;
 
     private Integer apiId;
+
+    private List<Beer> beerList;
 
     public Brewery()
     {
@@ -70,5 +73,19 @@ public class Brewery
     public void setApiId(Integer apiId)
     {
         this.apiId = apiId;
+    }
+
+    public List<Beer> getBeerList()
+    {
+        if (beerList == null)
+        {
+            this.beerList = new ArrayList<>();
+        }
+        return beerList;
+    }
+
+    public void setBeerList(List<Beer> beerList)
+    {
+        this.beerList = beerList;
     }
 }

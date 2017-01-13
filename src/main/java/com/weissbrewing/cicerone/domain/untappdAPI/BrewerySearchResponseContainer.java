@@ -3,18 +3,18 @@ package com.weissbrewing.cicerone.domain.untappdAPI;
 /**
  * Created by kevinweiss on 1/13/17.
  */
-public class Response
+public class BrewerySearchResponseContainer
 {
     private Meta meta;
 
-    private QueryResponse response;
+    private BrewerySearchResponse response;
 
     public Meta getMeta()
     {
         return meta;
     }
 
-    public QueryResponse getResponse()
+    public BrewerySearchResponse getResponse()
     {
         return response;
     }
@@ -24,7 +24,7 @@ public class Response
     {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Response{");
+        sb.append("BrewerySearchResponseContainer{");
         sb.append("meta=");
         sb.append(meta);
         sb.append("} response=[");

@@ -55,7 +55,7 @@ public class HttpUtil
 
             if (LOG.isTraceEnabled())
             {
-                LOG.trace("Response Code : "
+                LOG.trace("BrewerySearchResponseContainer Code : "
                         + response.getStatusLine().getStatusCode());
             }
 
