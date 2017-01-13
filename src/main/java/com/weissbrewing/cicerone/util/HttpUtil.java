@@ -24,7 +24,6 @@ public class HttpUtil
     private static final Logger LOG = LoggerFactory.getLogger(HttpUtil.class.getName());
 
     private static final String BASE_URL = "https://api.untappd.com/v4/";
-        //method_name?client_id=CLIENTID&client_secret=CLIENTSECRET";
     public static final String CLIENT_ID = "client_id=EA379E1B4EDC01F652FD0C9E0BFCB93F1F74DE68";
     public static final String CLIENT_SECRET = "client_secret=857595F39642428028062978B593475CBF052569";
     public static final String CREDENTIALS = "&" + CLIENT_ID + "&" + CLIENT_SECRET;
@@ -35,7 +34,7 @@ public class HttpUtil
      * @param params The method parameters
      * @return The response as a String
      */
-    public static String get(String method, String params)
+    public String get(String method, String params)
     {
         HttpClient client = HttpClientBuilder.create().build();
 

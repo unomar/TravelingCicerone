@@ -7,8 +7,6 @@ import java.util.List;
  */
 public class Brewery
 {
-
-
     private int id;
 
     private String name;
@@ -16,6 +14,8 @@ public class Brewery
     private List<Location> locations;
 
     private Integer availability;
+
+    private Integer apiId;
 
     public Brewery()
     {
@@ -60,5 +60,15 @@ public class Brewery
     public void setAvailability(Integer availability)
     {
         this.availability = availability;
+    }
+
+    public Integer getApiId()
+    {
+        return apiId;
+    }
+
+    public void setApiId(Integer apiId)
+    {
+        this.apiId = apiId;
     }
 }
