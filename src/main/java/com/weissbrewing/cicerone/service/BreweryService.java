@@ -1,6 +1,7 @@
 package com.weissbrewing.cicerone.service;
 
 import com.weissbrewing.cicerone.das.DistributionDAS;
+import com.weissbrewing.cicerone.das.UntappdDAS;
 import com.weissbrewing.cicerone.domain.Brewery;
 import com.weissbrewing.cicerone.domain.Location;
 
@@ -12,14 +13,27 @@ import java.util.List;
  */
 public class BreweryService
 {
-    private DistributionDAS distributionDAS = new DistributionDAS();
+    private final DistributionDAS distributionDAS;
+
+    private final UntappdDAS untappdDAS;
 
     /**
      * Default Constructor
      */
     public BreweryService()
     {
+        this(new DistributionDAS(), new UntappdDAS());
+    }
 
+    /**
+     * Constructor
+     * @param distributionDAS The DistributionDAS to use
+     * @param untappdDAS The UntappdDAS to use
+     */
+    public BreweryService(DistributionDAS distributionDAS, UntappdDAS untappdDAS)
+    {
+        this.distributionDAS = distributionDAS;
+        this.untappdDAS = untappdDAS;
     }
 
     /**
@@ -75,6 +89,18 @@ public class BreweryService
     public List<String> getAvailableBreweriesByState(Location location)
     {
         return getUnavailableBreweries(location, null);
+    }
+
+    /**
+     * Search for a Brewery by name
+     * @param breweryName The brewery name to search
+     * @return The matching brewery
+     */
+    public Brewery getBreweryByName(String breweryName)
+    {
+        Brewery brewery = new Brewery();
+        brewery.setName(breweryName);
+        return untappdDAS.searchBrewery(brewery);
     }
 
     public static void main(String [] args)
