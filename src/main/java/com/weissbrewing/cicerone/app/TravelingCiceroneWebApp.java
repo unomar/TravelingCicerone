@@ -14,20 +14,25 @@ import org.restlet.routing.Router;
  */
 public class TravelingCiceroneWebApp extends Application
 {
+
+    public static final String BREWERY_SEARCH_ENDPOINT = "/brewerysearch/{breweryName}";
+    public static final String BREWERY_COMPARISON_ENDPOINT = "/brewerysearch/{current}/{home}";
+    public static final int PORT = 8182;
+
     public static void main(String [] args) throws Exception {
         Component component = new Component();
-        component.getServers().add(Protocol.HTTP, 8182);
+        component.getServers().add(Protocol.HTTP, PORT);
 
         BrewerySearchRestlet brewerySearchRestlet = new BrewerySearchRestlet(new BreweryService());
-        component.getDefaultHost().attach("/brewerysearch/{breweryName}", brewerySearchRestlet);
-        component.getDefaultHost().attach("/brewerysearch/{current}/{home}", new LocationComparisonRestlet(new BreweryService()));
+        component.getDefaultHost().attach(BREWERY_SEARCH_ENDPOINT, brewerySearchRestlet);
+        component.getDefaultHost().attach(BREWERY_COMPARISON_ENDPOINT, new LocationComparisonRestlet(new BreweryService()));
         component.start();
     }
 
     public Restlet createRoot() {
         Router router = new Router(getContext());
-        router.attach("/brewerysearch/{breweryName}", new BrewerySearchRestlet(new BreweryService()));
-        router.attach("/brewerysearch/{current}/{home}", new LocationComparisonRestlet(new BreweryService()));
+        router.attach(BREWERY_SEARCH_ENDPOINT, new BrewerySearchRestlet(new BreweryService()));
+        router.attach(BREWERY_COMPARISON_ENDPOINT, new LocationComparisonRestlet(new BreweryService()));
 
         return router;
     }
